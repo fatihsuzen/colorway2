@@ -14,7 +14,7 @@ public class Difficulty : MonoBehaviour
         if(Score.scoreint > lvlpoint && Score.scoreint < 400)
         {
           difficulty1 += 1;
-          MaterialMovement.speed += 0.15f;
+          MaterialMovement.speed += 10f;
           lvlpoint += 30;
           Spawner.time -= 0.03f;
             

@@ -8,7 +8,7 @@ public class MaterialMovement : MonoBehaviour
 {
     float z;
     private bool istouchground = false;
-    public static float speed = 0.5f;
+    public static float speed = 80f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class MaterialMovement : MonoBehaviour
         if (istouchground == true)
         {
             gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, z);
-            z -= speed;
+            z -= speed*Time.deltaTime;
         }
     }
     private void OnCollisionEnter(Collision collision)

@@ -15,7 +15,7 @@ public class MovementForMobil : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved)
             {
-                transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speed*Time.deltaTime, transform.position.y, transform.position.z);
             }
 
         }

@@ -21,6 +21,7 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
+       
         difficulty = Difficulty.difficulty1;
         if (Time.time > nextSpawn)
         {
@@ -28,7 +29,7 @@ public class Spawner : MonoBehaviour
             randomMid = Random.Range(0, GameObjects.Count);
             randomRight = Random.Range(0, GameObjects.Count);
             randomcolor = Random.Range(0, GameObjects.Count);
-            
+           
             int fark = 0;
 
             for (int i = 0; i<difficulty;i++)
@@ -39,6 +40,7 @@ public class Spawner : MonoBehaviour
                 Instantiate(GameObjects[0 + randomRight], new Vector3(-2, 0.5f, 120f+ fark), Quaternion.identity);
                 
             }
+            
             WhichColor(randomcolor, randomLeft, randomMid, randomRight);
 
             nextSpawn = Time.time + time;
